@@ -1,4 +1,0 @@
-spawn ssh san-game-user@47.74.187.xxx "/opt/mam_platform/bin/mam_platform attach"
-expect ">" { send "ms_room_mgr:update_status(true).\r" }
-#expect ">" { send "^D" }
-interact
