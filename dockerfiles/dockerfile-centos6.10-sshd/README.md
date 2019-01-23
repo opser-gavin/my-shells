@@ -16,3 +16,5 @@ run:
 	
 	# ssh root@172.17.0.4 -p 1024
 	
+	default password is 123456
+	
