@@ -1,0 +1,11 @@
+FROM centos:6.10
+
+RUN yum -y update; yum clean all
+RUN yum -y install openssh-server passwd; yum clean all
+
+RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ''
+RUN echo "123456" |passwd --stdin root
+
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
